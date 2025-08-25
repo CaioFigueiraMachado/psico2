@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. João Silva - Psicólogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 30px 25px;
+            margin-bottom: 20px;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 18px;
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .crp {
+            font-size: 14px;
+            color: #94a3b8;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .section {
+            background: #1e293b;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 15px;
+            border: 1px solid #334155;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 15px;
+        }
+
+        .specialties {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .specialty-item {
+            background: #334155;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            color: #e2e8f0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 5px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .approach-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .approach-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .approach-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #22c55e;
+        }
+
+        .btn-instagram {
+            background: #e1306c;
+            color: white;
+        }
+
+        .btn-instagram:hover {
+            background: #c13584;
+        }
+
+        .btn-linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .btn-linkedin:hover {
+            background: #005885;
+        }
+
+        .btn-email {
+            background: #6366f1;
+            color: white;
+        }
+
+        .btn-email:hover {
+            background: #4f46e5;
+        }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        .schedule-info {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.1));
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .schedule-title {
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .watermark {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 28px;
+            }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
+            
+            .specialties {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-photo">JS</div>
+            <h1 class="name">Dr. seu nome</h1>
+            <div class="title">Psicólogo Clínico</div>
+            <div class="crp">CRP 06/123456</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Especialidades</div>
+            <div class="specialties">
+                <div class="specialty-item">Adultos</div>
+                <div class="specialty-item">Casais</div>
+                <div class="specialty-item">Ansiedade</div>
+                <div class="specialty-item">Depressão</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Experiência</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-number">8+</div>
+                    <div class="info-label">Anos de Experiência</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-number">500+</div>
+                    <div class="info-label">Pacientes Atendidos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Abordagens Terapêuticas</div>
+            <ul class="approach-list">
+                <li>
+                    <div class="check-icon">✓</div>
+                    Terapia Cognitivo-Comportamental (TCC)
+                </li>
+                <li>
+                    <div class="check-icon">✓</div>
+                    Terapia de Aceitação e Compromisso (ACT)
+                </li>
+                <li>
+                    <div class="check-icon">✓</div>
+                    Mindfulness e Técnicas de Relaxamento
+                </li>
+                <li>
+                    <div class="check-icon">✓</div>
+                    Terapia Sistêmica para Casais
+                </li>
+            </ul>
+        </div>
+
+        <div class="schedule-info">
+            <div class="schedule-title">Horários de Atendimento</div>
+            <div class="schedule-item">
+                <span>Segunda a Sexta</span>
+                <span>08:00 - 18:00</span>
+            </div>
+            <div class="schedule-item">
+                <span>Sábado</span>
+                <span>08:00 - 12:00</span>
+            </div>
+            <div class="schedule-item">
+                <span>Modalidade</span>
+                <span>Online e Presencial</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Entre em Contato</div>
+            <div class="buttons">
+                <a href="#" class="btn btn-whatsapp" onclick="openWhatsApp()">
+                    WhatsApp
+                </a>
+                
+                <a href="#" class="btn btn-instagram" onclick="openInstagram()">
+                    Instagram
+                </a>
+                
+                <a href="#" class="btn btn-linkedin" onclick="openLinkedIn()">
+                    LinkedIn
+                </a>
+                
+                <a href="#" class="btn btn-email" onclick="sendEmail()">
+                    E-mail
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="watermark">
+        
+    </div>
+
+    <script>
+        function openWhatsApp() {
+            const phoneNumber = "5511999999999";
+            const message = "Olá Dr. João! Gostaria de agendar uma consulta psicológica.";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        function openInstagram() {
+            const instagramProfile = "drjoaosilva";
+            const url = `https://instagram.com/${instagramProfile}`;
+            window.open(url, '_blank');
+        }
+
+        function openLinkedIn() {
+            const linkedinProfile = "dr-joao-silva-psicologo";
+            const url = `https://linkedin.com/in/${linkedinProfile}`;
+            window.open(url, '_blank');
+        }
+
+        function sendEmail() {
+            const email = "contato@drjoaosilva.com.br";
+            const subject = "Agendamento de Consulta";
+            const body = "Olá Dr. João,\n\nGostaria de agendar uma consulta psicológica.\n\nAguardo seu retorno.";
+            const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(url);
+        }
+
+
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'974e40e0d2bbfd72',t:'MTc1NjE1ODA4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
